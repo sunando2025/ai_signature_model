@@ -39,7 +39,3 @@ async def get_info():
     app_title = os.getenv("APP_TITLE", "My FastAPI App")
     return {"app_version": app_version, "app_title": app_title}
 
-@app.get("/metrics")
-async def metrics():
-    return generate_latest(request_counter)
-
